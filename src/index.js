@@ -1,5 +1,4 @@
 import {NearContract, NearBindgen, call, view, near} from 'near-sdk-js'
-import { Random } from "random-js";
 
 @NearBindgen
 class CoinFlip extends NearContract {
@@ -18,6 +17,7 @@ class CoinFlip extends NearContract {
     flipCoin(side) {
         // Get the current player and ensure they're in the game state
         let player = near.predecessorAccountId();
+
         if(!(player in this.points)) {
             this.points[player] = 0;
         }
@@ -25,10 +25,9 @@ class CoinFlip extends NearContract {
         env.log(`${player} chose ${side}`);
 
         // CCC
-
-        let random = new Random();
-        const value = random.integer(1, 100);
-        env.log(`value was ${value}`);
+        let random = near.randomSeed();
+        env.log(`value was ${random.get(0)}`);
+        env.log(`value2 was ${random.get(0)[0]}`);
 
         // Get the result of the coin flip
         let result; 

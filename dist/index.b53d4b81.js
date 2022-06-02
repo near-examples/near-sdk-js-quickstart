@@ -41615,8 +41615,8 @@ async function signTransaction(...args) {
 exports.signTransaction = signTransaction;
 
 },{"buffer":"fCgem","js-sha256":"ahVaM","./utils/enums":"kjmPo","borsh":"4JCmN","./utils/key_pair":"kBQFP"}],"ahVaM":[function(require,module,exports) {
-var global = arguments[3];
 var process = require("process");
+var global = arguments[3];
 /**
  * [js-sha256]{@link https://github.com/emn178/js-sha256}
  *
@@ -44259,7 +44259,7 @@ module.exports = function() {
 };
 
 },{"u3":"dIyaj","./prepareStackTrace":"85RZD"}],"9VuTo":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1654189750878-54281432706351";
+const CONTRACT_NAME = "dev-1654192032162-60279953390085";
 function getConfig(env) {
     switch(env){
         case "production":
