@@ -24,7 +24,7 @@ class CoinFlip extends NearContract {
         env.log(`${player} chose ${side}`);
 
         // Cross contract call to the random number hub to get a random number between 0 and 1 (inclusive) as an integer
-        const randomNum = near.jsvmCall('random-hub.examples.testnet', 'generateRandomNumber', [0, 1]);
+        const randomNum = near.jsvmCall('random-hub.examples.testnet', 'generateRandomNumber', '');
 
         // Let's set heads to be 0 and tails to be 1
         let outcome = randomNum == 0 ? "heads" : "tails";

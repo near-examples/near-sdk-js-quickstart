@@ -28080,17 +28080,7 @@ async function initContract() {
     }, nearConfig)); // Initializing Wallet based Account. It can work with NEAR testnet wallet that
     // is hosted at https://wallet.testnet.near.org
     window.walletConnection = new (0, _nearApiJs.WalletConnection)(near); // Getting the Account ID. If still unauthorized, it's just empty string
-    window.accountId = window.walletConnection.getAccountId(); // Initializing our contract APIs by contract name and configuration
-    window.contract = await new (0, _nearApiJs.Contract)(window.walletConnection.account(), "jsvm.testnet", {
-        // View methods are read only. They don't modify the state, but usually return some value.
-        viewMethods: [
-            "view_js_contract"
-        ],
-        // Change methods can modify the state. But you don't receive the returned value when called.
-        changeMethods: [
-            "call_js_contract"
-        ]
-    });
+    window.accountId = window.walletConnection.getAccountId();
 }
 function logout() {
     window.walletConnection.signOut(); // reload page
@@ -44250,7 +44240,7 @@ module.exports = function() {
 };
 
 },{"u3":"dIyaj","./prepareStackTrace":"85RZD"}],"9VuTo":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1654195997896-70506931300532";
+const CONTRACT_NAME = "dev-1654270232041-50393223890720";
 function getConfig(env) {
     switch(env){
         case "production":
