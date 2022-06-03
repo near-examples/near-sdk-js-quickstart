@@ -3,7 +3,7 @@ import React from 'react'
 
 import './assets/css/global.css'
 
-import {login, logout, get_points, set_points, flip_coin} from './utils/utils'
+import {login, logout, get_points, flip_coin} from './utils/utils'
 import getConfig from './utils/config'
 
 
