@@ -16,8 +16,27 @@ class CoinFlip extends NearContract {
     @call
     flipCoin(side) {
         // Get the current player and ensure they're in the game state
-        const status = near.jsvmCall('random-hub.examples.near', 'getRandomNumber', [0, 1]);
-        env.log(`status: ${status}`);
+        let player = near.predecessorAccountId();
+        if(!(player in this.points)) {
+            this.points[player] = 0;
+        }
+
+        env.log(`${player} chose ${side}`);
+
+        // Cross contract call to the random number hub to get a random number between 0 and 1 (inclusive) as an integer
+        const randomNum = near.jsvmCall('random-hub.examples.testnet', 'generateRandomNumber', [0, 1]);
+
+        // Let's set heads to be 0 and tails to be 1
+        let outcome = randomNum == 0 ? "heads" : "tails";
+
+        // Check if the result was what the player passed in
+        if(side == outcome) {
+            env.log(`You Get a Point! The result was ${outcome}`);
+            this.points[player] += 1;
+        } else {
+            env.log(`You lost a point... The result was ${outcome}`);
+            this.points[player] -= 1;
+        }
     }
 
     // View how many points a specific player has

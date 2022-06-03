@@ -27420,7 +27420,7 @@ exports.default = App;
 _s(App, "3697tolBny3vfVBKQSn6cHN2ctA=");
 _c = App;
 function Notification() {
-    const { networkId  } = (0, _configDefault.default)("development");
+    const { networkId , contractName  } = (0, _configDefault.default)("development");
     const urlPrefix = `https://explorer.${networkId}.near.org/accounts`;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("aside", {
         children: [
@@ -27431,48 +27431,39 @@ function Notification() {
                 children: window.accountId
             }, void 0, false, {
                 fileName: "frontend/App.js",
-                lineNumber: 170,
+                lineNumber: 171,
                 columnNumber: 7
             }, this),
             " ",
-            "called method: 'set_greeting' in contract:",
+            "called method: 'flipCoin' in contract:",
             " ",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                target: "_blank",
-                rel: "noreferrer",
-                href: `${urlPrefix}/${window.contract.contractId}`,
-                children: window.contract.contractId
-            }, void 0, false, {
-                fileName: "frontend/App.js",
-                lineNumber: 178,
-                columnNumber: 7
-            }, this),
+            contractName,
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: "\u2714 Succeeded"
                     }, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 182,
+                        lineNumber: 181,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: "Just now"
                     }, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 183,
+                        lineNumber: 182,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "frontend/App.js",
-                lineNumber: 181,
+                lineNumber: 180,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "frontend/App.js",
-        lineNumber: 169,
+        lineNumber: 170,
         columnNumber: 10
     }, this);
 }
@@ -44259,7 +44250,7 @@ module.exports = function() {
 };
 
 },{"u3":"dIyaj","./prepareStackTrace":"85RZD"}],"9VuTo":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1654192032162-60279953390085";
+const CONTRACT_NAME = "dev-1654195997896-70506931300532";
 function getConfig(env) {
     switch(env){
         case "production":
