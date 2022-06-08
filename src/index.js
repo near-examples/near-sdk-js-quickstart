@@ -14,7 +14,7 @@ class CoinFlip extends NearContract {
         indicating whether the flip was heads or tails. If you got it right, you get a point.
     */
     @call
-    flipCoin(side) {
+    flipCoin({side}) {
         // Get the current player and ensure they're in the game state
         let player = near.predecessorAccountId();
         if(!(player in this.points)) {
@@ -41,7 +41,7 @@ class CoinFlip extends NearContract {
 
     // View how many points a specific player has
     @view
-    viewPoints(player) {
+    viewPoints({player}) {
         return this.points[player];
     }
 }
