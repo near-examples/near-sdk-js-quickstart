@@ -85,7 +85,7 @@ export default function App() {
               borderBottom: '2px solid var(--secondary)'
             }}
           >
-            Your Points: {points == false ? 0 : points}
+            Your Points: {points == null ? 0 : points}
           </label>
           {' '/* React trims whitespace around tags; insert literal space character when needed */}
           {window.accountId}!

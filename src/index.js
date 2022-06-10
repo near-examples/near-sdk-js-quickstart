@@ -12,19 +12,16 @@ class RandomHub extends NearContract {
     */
     @view
     generateRandomNumber() {
-        let absoluteMax = 256
-        
         // Get random string and check what the the character code is at the first index
-        let foo = near.randomSeed(); 
+        let randomString = near.randomSeed(); 
         // Random between 0 and 65535? I think???
-        let randomNumber = foo.charCodeAt(0);
-        
-        env.log(foo)
-        env.log(randomNumber)
+        let randomNumber = randomString.charCodeAt(0);
 
-        if(randomNumber > (absoluteMax / 2)) {
+        if(randomNumber > 95) {
+            env.log(`Random number (${randomNumber}) greater than 95. Returning 1`)
             return 1
         } else {
+            env.log(`Random number (${randomNumber}) less than or equal to 95. Returning 0`)
             return 0;
         }
     }

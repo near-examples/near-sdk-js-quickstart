@@ -1,12 +1,8 @@
-import { connect, Contract, keyStores, WalletConnection } from 'near-api-js'
+import { connect, keyStores, WalletConnection } from 'near-api-js'
 import { parseNearAmount } from 'near-api-js/lib/utils/format'
 import getConfig from './config'
 
 const nearConfig = getConfig(process.env.NODE_ENV || 'development')
-
-function encodeCall(contract, method, args) {
-  return Buffer.concat([Buffer.from(contract), Buffer.from([0]), Buffer.from(method), Buffer.from([0]), Buffer.from(args)])
-}
 
 // Initialize contract & set global variables
 export async function initContract() {
@@ -36,31 +32,43 @@ export function login() {
 }
 
 export async function flip_coin(side, points){
-  if (points == false) {
+  if (points == null) {
     console.log("First Time Playing!");
   }
 
-  let args = encodeCall(nearConfig.contractName, 'flipCoin', `["${side}"]`);
   let account = window.walletConnection.account();
 
+  // Use near-api-js to perform the function call. Since this is using the JS SDK, 
+  // the jsContract boolean must be set to true.
   const result = await account.functionCall({
-    contractId: "jsvm.testnet",
-    methodName: 'call_js_contract',
-    args,
+    contractId: nearConfig.contractName,
+    methodName: 'flipCoin',
+    args: {
+      "side": side
+    },
     gas: "300000000000000",
-    attachedDeposit: points == false ? parseNearAmount("0.1") : "0"
+    attachedDeposit: points == null ? parseNearAmount("0.1") : "0",
+    jsContract: true,
   });
   
   return result
 }
 
 export async function get_points() {
-  let args = encodeCall(nearConfig.contractName, 'viewPoints', `["${window.walletConnection.getAccountId()}"]`);
   let account = window.walletConnection.account();
-  
-  const points = await account.viewFunction("jsvm.testnet", 'view_js_contract', args, {
-    stringify: (val) => val,
-  });
+
+  // Use near-api-js to perform the call. Since this is using the JS SDK, 
+  // the jsContract boolean must be set to true.
+  const points = await account.viewFunction(
+    nearConfig.contractName, 
+    'viewPoints', 
+    {
+      "player": window.walletConnection.getAccountId()
+    },
+    { 
+      jsContract: true
+    }
+  )
   
   return points
 }
