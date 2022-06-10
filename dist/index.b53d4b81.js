@@ -2900,7 +2900,7 @@ window.nearInitPromise = (0, _utils.initContract)().then(()=>{
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./App":"2wn7y","./utils/utils":"7WPDg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./App":"2wn7y","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./utils/utils":"7WPDg"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
@@ -27001,6 +27001,7 @@ function App() {
     (0, _reactDefault.default).useEffect(()=>{
         if (window.walletConnection.isSignedIn()) // get_points is in near/utils.js
         (0, _utils.get_points)().then((pointsForAccount)=>{
+            console.log(pointsForAccount);
             setPoints(pointsForAccount);
         });
     }, // Use an empty array to specify "only run on first render"
@@ -27019,28 +27020,28 @@ function App() {
                         children: "Hello! "
                     }, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 30,
+                        lineNumber: 31,
                         columnNumber: 11
                     }, this),
                     "Welcome to NEAR!"
                 ]
             }, void 0, true, {
                 fileName: "frontend/App.js",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Your contract is a simple coin flipping game. If you win, your account gets a point. If you lose, your account loses a point. This information is stored on the NEAR blockchain. To play you need to sign in using the NEAR Wallet. It is very simple, just use the button below."
             }, void 0, false, {
                 fileName: "frontend/App.js",
-                lineNumber: 38,
+                lineNumber: 39,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: 'Do not worry, this app runs in the test network ("testnet"). It works just like the main network ("mainnet"), but using NEAR Tokens that are only for testing!'
             }, void 0, false, {
                 fileName: "frontend/App.js",
-                lineNumber: 44,
+                lineNumber: 45,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27053,18 +27054,18 @@ function App() {
                     children: "Sign in"
                 }, void 0, false, {
                     fileName: "frontend/App.js",
-                    lineNumber: 53,
+                    lineNumber: 54,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "frontend/App.js",
-                lineNumber: 49,
+                lineNumber: 50,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "frontend/App.js",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 12
     }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -27078,7 +27079,7 @@ function App() {
                 children: "Sign out"
             }, void 0, false, {
                 fileName: "frontend/App.js",
-                lineNumber: 60,
+                lineNumber: 61,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -27093,11 +27094,11 @@ function App() {
                                 },
                                 children: [
                                     "Your Points: ",
-                                    points == false ? 0 : points
+                                    points == null ? 0 : points
                                 ]
                             }, void 0, true, {
                                 fileName: "frontend/App.js",
-                                lineNumber: 67,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, this),
                             " ",
@@ -27106,7 +27107,7 @@ function App() {
                         ]
                     }, void 0, true, {
                         fileName: "frontend/App.js",
-                        lineNumber: 66,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -27148,7 +27149,7 @@ function App() {
                                     children: "Flip Coin - Note: your first flip requires a deposit"
                                 }, void 0, false, {
                                     fileName: "frontend/App.js",
-                                    lineNumber: 113,
+                                    lineNumber: 114,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27172,7 +27173,7 @@ function App() {
                                                     children: "Heads"
                                                 }, void 0, false, {
                                                     fileName: "frontend/App.js",
-                                                    lineNumber: 130,
+                                                    lineNumber: 131,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -27180,13 +27181,13 @@ function App() {
                                                     children: "Tails"
                                                 }, void 0, false, {
                                                     fileName: "frontend/App.js",
-                                                    lineNumber: 131,
+                                                    lineNumber: 132,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "frontend/App.js",
-                                            lineNumber: 124,
+                                            lineNumber: 125,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27197,31 +27198,31 @@ function App() {
                                             children: "Submit"
                                         }, void 0, false, {
                                             fileName: "frontend/App.js",
-                                            lineNumber: 133,
+                                            lineNumber: 134,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "frontend/App.js",
-                                    lineNumber: 120,
+                                    lineNumber: 121,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "frontend/App.js",
-                            lineNumber: 112,
+                            lineNumber: 113,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 78,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: "Look at that! A Simple JavaScript Contract WebApp! Your points are stored on the blockchain. Check it out:"
                     }, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 142,
+                        lineNumber: 143,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ol", {
@@ -27233,7 +27234,7 @@ function App() {
                                         children: "src/App.js"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 147,
+                                        lineNumber: 148,
                                         columnNumber: 21
                                     }, this),
                                     " and ",
@@ -27241,7 +27242,7 @@ function App() {
                                         children: "src/utils.js"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 147,
+                                        lineNumber: 148,
                                         columnNumber: 49
                                     }, this),
                                     " \u2013 you'll see ",
@@ -27249,7 +27250,7 @@ function App() {
                                         children: "get_points"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 147,
+                                        lineNumber: 148,
                                         columnNumber: 88
                                     }, this),
                                     " and ",
@@ -27257,7 +27258,7 @@ function App() {
                                         children: "flip_coin"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 147,
+                                        lineNumber: 148,
                                         columnNumber: 116
                                     }, this),
                                     " being called on the ",
@@ -27265,14 +27266,14 @@ function App() {
                                         children: "contract"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 147,
+                                        lineNumber: 148,
                                         columnNumber: 159
                                     }, this),
                                     ". What's this?"
                                 ]
                             }, void 0, true, {
                                 fileName: "frontend/App.js",
-                                lineNumber: 146,
+                                lineNumber: 147,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27282,7 +27283,7 @@ function App() {
                                         children: "contract"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 150,
+                                        lineNumber: 151,
                                         columnNumber: 30
                                     }, this),
                                     " code is defined in ",
@@ -27290,7 +27291,7 @@ function App() {
                                         children: "src/index.js"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 150,
+                                        lineNumber: 151,
                                         columnNumber: 71
                                     }, this),
                                     " \u2013 this is the source code for your ",
@@ -27301,14 +27302,14 @@ function App() {
                                         children: "smart contract"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 150,
+                                        lineNumber: 151,
                                         columnNumber: 132
                                     }, this),
                                     "."
                                 ]
                             }, void 0, true, {
                                 fileName: "frontend/App.js",
-                                lineNumber: 149,
+                                lineNumber: 150,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27318,7 +27319,7 @@ function App() {
                                         children: "yarn dev"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 152,
+                                        lineNumber: 153,
                                         columnNumber: 26
                                     }, this),
                                     ", the code in ",
@@ -27326,7 +27327,7 @@ function App() {
                                         children: "src/index.js"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 152,
+                                        lineNumber: 153,
                                         columnNumber: 61
                                     }, this),
                                     " gets deployed to the NEAR testnet. You can see how this happens by looking in ",
@@ -27334,7 +27335,7 @@ function App() {
                                         children: "package.json"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 152,
+                                        lineNumber: 153,
                                         columnNumber: 165
                                     }, this),
                                     " at the ",
@@ -27342,7 +27343,7 @@ function App() {
                                         children: "scripts"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 152,
+                                        lineNumber: 153,
                                         columnNumber: 198
                                     }, this),
                                     " section to find the ",
@@ -27350,25 +27351,25 @@ function App() {
                                         children: "dev"
                                     }, void 0, false, {
                                         fileName: "frontend/App.js",
-                                        lineNumber: 152,
+                                        lineNumber: 153,
                                         columnNumber: 239
                                     }, this),
                                     " command."
                                 ]
                             }, void 0, true, {
                                 fileName: "frontend/App.js",
-                                lineNumber: 151,
+                                lineNumber: 152,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "frontend/App.js",
-                        lineNumber: 145,
+                        lineNumber: 146,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 154,
+                        lineNumber: 155,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27381,7 +27382,7 @@ function App() {
                                 children: "the NEAR docs"
                             }, void 0, false, {
                                 fileName: "frontend/App.js",
-                                lineNumber: 156,
+                                lineNumber: 157,
                                 columnNumber: 39
                             }, this),
                             " or look through some ",
@@ -27392,25 +27393,25 @@ function App() {
                                 children: "example apps"
                             }, void 0, false, {
                                 fileName: "frontend/App.js",
-                                lineNumber: 156,
+                                lineNumber: 157,
                                 columnNumber: 143
                             }, this),
                             "."
                         ]
                     }, void 0, true, {
                         fileName: "frontend/App.js",
-                        lineNumber: 155,
+                        lineNumber: 156,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "frontend/App.js",
-                lineNumber: 65,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             showNotification && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Notification, {}, void 0, false, {
                 fileName: "frontend/App.js",
-                lineNumber: 159,
+                lineNumber: 160,
                 columnNumber: 28
             }, this)
         ]
@@ -27431,7 +27432,7 @@ function Notification() {
                 children: window.accountId
             }, void 0, false, {
                 fileName: "frontend/App.js",
-                lineNumber: 171,
+                lineNumber: 172,
                 columnNumber: 7
             }, this),
             " ",
@@ -27444,26 +27445,26 @@ function Notification() {
                         children: "\u2714 Succeeded"
                     }, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 181,
+                        lineNumber: 182,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: "Just now"
                     }, void 0, false, {
                         fileName: "frontend/App.js",
-                        lineNumber: 182,
+                        lineNumber: 183,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "frontend/App.js",
-                lineNumber: 180,
+                lineNumber: 181,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "frontend/App.js",
-        lineNumber: 170,
+        lineNumber: 171,
         columnNumber: 10
     }, this);
 }
@@ -27477,7 +27478,7 @@ $RefreshReg$(_c1, "Notification");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","./assets/css/global.css":"8cD1X","./utils/utils":"7WPDg","./utils/config":"9VuTo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dXNgZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","./assets/css/global.css":"8cD1X","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./utils/utils":"7WPDg","./utils/config":"9VuTo"}],"dXNgZ":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -28044,7 +28045,157 @@ try {
     else Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"8cD1X":[function() {},{}],"7WPDg":[function(require,module,exports) {
+},{}],"8cD1X":[function() {},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("react-refresh/runtime");
+function debounce(func, delay) {
+    var args1;
+    var timeout = undefined;
+    return function(args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args);
+        }, delay);
+    };
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module) {
+    if (isReactRefreshBoundary(module.exports)) {
+        registerExportsForReactRefresh(module);
+        if (module.hot) {
+            module.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module.exports;
+            });
+            module.hot.accept(function(getParents) {
+                var prevExports = module.hot.data.prevExports;
+                var nextExports = module.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module) {
+    var exports = module.exports, id = module.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + " %exports% " + key);
+    }
+}
+
+},{"react-refresh/runtime":"786KC"}],"7WPDg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "initContract", ()=>initContract);
@@ -28056,21 +28207,7 @@ var _nearApiJs = require("near-api-js");
 var _format = require("near-api-js/lib/utils/format");
 var _config = require("./config");
 var _configDefault = parcelHelpers.interopDefault(_config);
-var Buffer = require("buffer").Buffer;
-const nearConfig = (0, _configDefault.default)("development");
-function encodeCall(contract, method, args) {
-    return Buffer.concat([
-        Buffer.from(contract),
-        Buffer.from([
-            0
-        ]),
-        Buffer.from(method),
-        Buffer.from([
-            0
-        ]),
-        Buffer.from(args)
-    ]);
-} // Initialize contract & set global variables
+const nearConfig = (0, _configDefault.default)("development"); // Initialize contract & set global variables
 async function initContract() {
     // Initialize connection to the NEAR testnet
     const near = await (0, _nearApiJs.connect)(Object.assign({
@@ -28094,28 +28231,33 @@ function login() {
     window.walletConnection.requestSignIn("jsvm.testnet");
 }
 async function flip_coin(side, points) {
-    if (points == false) console.log("First Time Playing!");
-    let args = encodeCall(nearConfig.contractName, "flipCoin", `["${side}"]`);
-    let account = window.walletConnection.account();
+    if (points == null) console.log("First Time Playing!");
+    let account = window.walletConnection.account(); // Use near-api-js to perform the function call. Since this is using the JS SDK, 
+    // the jsContract boolean must be set to true.
     const result = await account.functionCall({
-        contractId: "jsvm.testnet",
-        methodName: "call_js_contract",
-        args,
+        contractId: nearConfig.contractName,
+        methodName: "flipCoin",
+        args: {
+            "side": side
+        },
         gas: "300000000000000",
-        attachedDeposit: points == false ? (0, _format.parseNearAmount)("0.1") : "0"
+        attachedDeposit: points == null ? (0, _format.parseNearAmount)("0.1") : "0",
+        jsContract: true
     });
     return result;
 }
 async function get_points() {
-    let args = encodeCall(nearConfig.contractName, "viewPoints", `["${window.walletConnection.getAccountId()}"]`);
-    let account = window.walletConnection.account();
-    const points = await account.viewFunction("jsvm.testnet", "view_js_contract", args, {
-        stringify: (val)=>val
+    let account = window.walletConnection.account(); // Use near-api-js to perform the call. Since this is using the JS SDK, 
+    // the jsContract boolean must be set to true.
+    const points = await account.viewFunction(nearConfig.contractName, "viewPoints", {
+        "player": window.walletConnection.getAccountId()
+    }, {
+        jsContract: true
     });
     return points;
 }
 
-},{"near-api-js":"ohc3m","near-api-js/lib/utils/format":"16c5X","./config":"9VuTo","buffer":"fCgem","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ohc3m":[function(require,module,exports) {
+},{"near-api-js":"ohc3m","near-api-js/lib/utils/format":"16c5X","./config":"9VuTo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ohc3m":[function(require,module,exports) {
 "use strict";
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -30907,7 +31049,6 @@ Object.defineProperty(exports, "BinaryReader", {
 
 },{"borsh":"4JCmN"}],"4JCmN":[function(require,module,exports) {
 "use strict";
-var global = arguments[3];
 var Buffer = require("buffer").Buffer;
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -30957,8 +31098,8 @@ const bn_js_1 = __importDefault(require("bn.js"));
 const bs58_1 = __importDefault(require("bs58"));
 // TODO: Make sure this polyfill not included when not required
 const encoding = __importStar(require("text-encoding-utf-8"));
-const TextDecoder = typeof global.TextDecoder !== "function" ? encoding.TextDecoder : global.TextDecoder;
-const textDecoder = new TextDecoder("utf-8", {
+const ResolvedTextDecoder = typeof TextDecoder !== "function" ? encoding.TextDecoder : TextDecoder;
+const textDecoder = new ResolvedTextDecoder("utf-8", {
     fatal: true
 });
 function baseEncode(value) {
@@ -31032,7 +31173,7 @@ class BinaryWriter {
         this.buf = Buffer.concat([
             Buffer.from(this.buf.subarray(0, this.length)),
             buffer,
-            Buffer.alloc(INITIAL_LENGTH)
+            Buffer.alloc(INITIAL_LENGTH), 
         ]);
         this.length += buffer.length;
     }
@@ -31193,6 +31334,13 @@ function serializeField(schema, fieldName, value, fieldType, writer) {
                     serializeField(schema, fieldName, value, fieldType.type, writer);
                 }
                 break;
+            case "map":
+                writer.writeU32(value.size);
+                value.forEach((val, key)=>{
+                    serializeField(schema, fieldName, key, fieldType.key, writer);
+                    serializeField(schema, fieldName, val, fieldType.value, writer);
+                });
+                break;
             default:
                 throw new BorshError(`FieldType ${fieldType} unrecognized`);
         }
@@ -31247,6 +31395,16 @@ function deserializeField(schema, fieldName, fieldType, reader) {
             const option = reader.readU8();
             if (option) return deserializeField(schema, fieldName, fieldType.type, reader);
             return undefined;
+        }
+        if (fieldType.kind === "map") {
+            let map = new Map();
+            const length = reader.readU32();
+            for(let i = 0; i < length; i++){
+                const key = deserializeField(schema, fieldName, fieldType.key, reader);
+                const val = deserializeField(schema, fieldName, fieldType.value, reader);
+                map.set(key, val);
+            }
+            return map;
         }
         return deserializeStruct(schema, fieldType, reader);
     } catch (error) {
@@ -41158,7 +41316,16 @@ exports.stringifyJsonOrBytes = stringifyJsonOrBytes;
  * @param gas max amount of gas that method call can use
  * @param deposit amount of NEAR (in yoctoNEAR) to send together with the call
  * @param stringify Convert input arguments into bytes array.
- */ function functionCall(methodName, args, gas, deposit, stringify = stringifyJsonOrBytes) {
+ * @param jsContract  Is contract from JS SDK, skips stringification of arguments.
+ */ function functionCall(methodName, args, gas, deposit, stringify = stringifyJsonOrBytes, jsContract = false) {
+    if (jsContract) return new Action({
+        functionCall: new FunctionCall({
+            methodName,
+            args,
+            gas,
+            deposit
+        })
+    });
     return new Action({
         functionCall: new FunctionCall({
             methodName,
@@ -42422,6 +42589,19 @@ function bytesJsonStringify(input) {
             ]
         });
     }
+    /** @hidden */ encodeJSContractArgs(contractId, method, args) {
+        return Buffer.concat([
+            Buffer.from(contractId),
+            Buffer.from([
+                0
+            ]),
+            Buffer.from(method),
+            Buffer.from([
+                0
+            ]),
+            Buffer.from(args)
+        ]);
+    }
     async functionCall(...args) {
         if (typeof args[0] === "string") return this.functionCallV1(args[0], args[1], args[2], args[3], args[4]);
         else return this.functionCallV2(args[0]);
@@ -42438,13 +42618,35 @@ function bytesJsonStringify(input) {
             ]
         });
     }
-    functionCallV2({ contractId , methodName , args ={} , gas =constants_1.DEFAULT_FUNCTION_CALL_GAS , attachedDeposit , walletMeta , walletCallbackUrl , stringify  }) {
+    functionCallV2({ contractId , methodName , args ={} , gas =constants_1.DEFAULT_FUNCTION_CALL_GAS , attachedDeposit , walletMeta , walletCallbackUrl , stringify , jsContract  }) {
         this.validateArgs(args);
-        const stringifyArg = stringify === undefined ? transaction_1.stringifyJsonOrBytes : stringify;
+        let functionCallArgs;
+        if (jsContract) {
+            const encodedArgs = this.encodeJSContractArgs(contractId, methodName, JSON.stringify(args));
+            functionCallArgs = [
+                "call_js_contract",
+                encodedArgs,
+                gas,
+                attachedDeposit,
+                null,
+                true
+            ];
+        } else {
+            const stringifyArg = stringify === undefined ? transaction_1.stringifyJsonOrBytes : stringify;
+            functionCallArgs = [
+                methodName,
+                args,
+                gas,
+                attachedDeposit,
+                stringifyArg,
+                false
+            ];
+        }
         return this.signAndSendTransaction({
-            receiverId: contractId,
+            receiverId: jsContract ? this.connection.jsvmAccountId : contractId,
+            // eslint-disable-next-line prefer-spread
             actions: [
-                transaction_1.functionCall(methodName, args, gas, attachedDeposit, stringifyArg)
+                transaction_1.functionCall.apply(void 0, functionCallArgs)
             ],
             walletMeta,
             walletCallbackUrl
@@ -42510,15 +42712,18 @@ function bytesJsonStringify(input) {
      * @param args Any arguments to the view contract method, wrapped in JSON
      * @param options.parse Parse the result of the call. Receives a Buffer (bytes array) and converts it to any object. By default result will be treated as json.
      * @param options.stringify Convert input arguments into a bytes array. By default the input is treated as a JSON.
+     * @param options.jsContract Is contract from JS SDK, automatically encodes args from JS SDK to binary.
      * @returns {Promise<any>}
-     */ async viewFunction(contractId, methodName, args = {}, { parse =parseJsonFromRawResponse , stringify =bytesJsonStringify  } = {}) {
+     */ async viewFunction(contractId, methodName, args = {}, { parse =parseJsonFromRawResponse , stringify =bytesJsonStringify , jsContract =false  } = {}) {
+        let encodedArgs;
         this.validateArgs(args);
-        const serializedArgs = stringify(args).toString("base64");
+        if (jsContract) encodedArgs = this.encodeJSContractArgs(contractId, methodName, Object.keys(args).length > 0 ? JSON.stringify(args) : "");
+        else encodedArgs = stringify(args);
         const result = await this.connection.provider.query({
             request_type: "call_function",
-            account_id: contractId,
-            method_name: methodName,
-            args_base64: serializedArgs,
+            account_id: jsContract ? this.connection.jsvmAccountId : contractId,
+            method_name: jsContract ? "view_js_contract" : methodName,
+            args_base64: encodedArgs.toString("base64"),
             finality: "optimistic"
         });
         if (result.logs) this.printLogs(contractId, result.logs);
@@ -42632,13 +42837,14 @@ var __importDefault = this && this.__importDefault || function(mod) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Account2FA = exports.AccountMultisig = exports.MULTISIG_CONFIRM_METHODS = exports.MULTISIG_CHANGE_METHODS = exports.MULTISIG_DEPOSIT = exports.MULTISIG_GAS = exports.MULTISIG_ALLOWANCE = exports.MULTISIG_STORAGE_KEY = void 0;
+exports.Account2FA = exports.AccountMultisig = exports.MultisigStateStatus = exports.MultisigDeleteRequestRejectionError = exports.MULTISIG_CONFIRM_METHODS = exports.MULTISIG_CHANGE_METHODS = exports.MULTISIG_DEPOSIT = exports.MULTISIG_GAS = exports.MULTISIG_ALLOWANCE = exports.MULTISIG_STORAGE_KEY = void 0;
 const bn_js_1 = __importDefault(require("bn.js"));
 const depd_1 = __importDefault(require("depd"));
 const account_1 = require("./account");
 const format_1 = require("./utils/format");
 const key_pair_1 = require("./utils/key_pair");
 const transaction_1 = require("./transaction");
+const providers_1 = require("./providers");
 const web_1 = require("./utils/web");
 exports.MULTISIG_STORAGE_KEY = "__multisigRequest";
 exports.MULTISIG_ALLOWANCE = new bn_js_1.default(format_1.parseNearAmount("1"));
@@ -42654,6 +42860,27 @@ exports.MULTISIG_CHANGE_METHODS = [
 exports.MULTISIG_CONFIRM_METHODS = [
     "confirm"
 ];
+var MultisigDeleteRequestRejectionError;
+(function(MultisigDeleteRequestRejectionError1) {
+    MultisigDeleteRequestRejectionError1["CANNOT_DESERIALIZE_STATE"] = "Cannot deserialize the contract state";
+    MultisigDeleteRequestRejectionError1["MULTISIG_NOT_INITIALIZED"] = "Smart contract panicked: Multisig contract should be initialized before usage";
+    MultisigDeleteRequestRejectionError1["NO_SUCH_REQUEST"] = "Smart contract panicked: panicked at 'No such request: either wrong number or already confirmed'";
+    MultisigDeleteRequestRejectionError1["REQUEST_COOLDOWN_ERROR"] = "Request cannot be deleted immediately after creation.";
+    MultisigDeleteRequestRejectionError1["METHOD_NOT_FOUND"] = "Contract method is not found";
+})(MultisigDeleteRequestRejectionError = exports.MultisigDeleteRequestRejectionError || (exports.MultisigDeleteRequestRejectionError = {}));
+var MultisigStateStatus;
+(function(MultisigStateStatus1) {
+    MultisigStateStatus1[MultisigStateStatus1["INVALID_STATE"] = 0] = "INVALID_STATE";
+    MultisigStateStatus1[MultisigStateStatus1["STATE_NOT_INITIALIZED"] = 1] = "STATE_NOT_INITIALIZED";
+    MultisigStateStatus1[MultisigStateStatus1["VALID_STATE"] = 2] = "VALID_STATE";
+    MultisigStateStatus1[MultisigStateStatus1["UNKNOWN_STATE"] = 3] = "UNKNOWN_STATE";
+})(MultisigStateStatus = exports.MultisigStateStatus || (exports.MultisigStateStatus = {}));
+var MultisigCodeStatus;
+(function(MultisigCodeStatus1) {
+    MultisigCodeStatus1[MultisigCodeStatus1["INVALID_CODE"] = 0] = "INVALID_CODE";
+    MultisigCodeStatus1[MultisigCodeStatus1["VALID_CODE"] = 1] = "VALID_CODE";
+    MultisigCodeStatus1[MultisigCodeStatus1["UNKNOWN_CODE"] = 2] = "UNKNOWN_CODE";
+})(MultisigCodeStatus || (MultisigCodeStatus = {}));
 // in memory request cache for node w/o localStorage
 const storageFallback = {
     [exports.MULTISIG_STORAGE_KEY]: null
@@ -42715,6 +42942,63 @@ class AccountMultisig extends account_1.Account {
         // NOTE there is no await on purpose to avoid blocking for 2fa
         this.deleteUnconfirmedRequests();
         return result;
+    }
+    /*
+     * This method submits a canary transaction that is expected to always fail in order to determine whether the contract currently has valid multisig state
+     * and whether it is initialized. The canary transaction attempts to delete a request at index u32_max and will go through if a request exists at that index.
+     * a u32_max + 1 and -1 value cannot be used for the canary due to expected u32 error thrown before deserialization attempt.
+     */ async checkMultisigCodeAndStateStatus(contractBytes) {
+        const u32_max = 4294967295;
+        const validCodeStatusIfNoDeploy = contractBytes ? MultisigCodeStatus.UNKNOWN_CODE : MultisigCodeStatus.VALID_CODE;
+        try {
+            if (contractBytes) await super.signAndSendTransaction({
+                receiverId: this.accountId,
+                actions: [
+                    transaction_1.deployContract(contractBytes),
+                    transaction_1.functionCall("delete_request", {
+                        request_id: u32_max
+                    }, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT)
+                ]
+            });
+            else await this.deleteRequest(u32_max);
+            return {
+                codeStatus: MultisigCodeStatus.VALID_CODE,
+                stateStatus: MultisigStateStatus.VALID_STATE
+            };
+        } catch (e) {
+            if (new RegExp(MultisigDeleteRequestRejectionError.CANNOT_DESERIALIZE_STATE).test(e && e.kind && e.kind.ExecutionError)) return {
+                codeStatus: validCodeStatusIfNoDeploy,
+                stateStatus: MultisigStateStatus.INVALID_STATE
+            };
+            else if (new RegExp(MultisigDeleteRequestRejectionError.MULTISIG_NOT_INITIALIZED).test(e && e.kind && e.kind.ExecutionError)) return {
+                codeStatus: validCodeStatusIfNoDeploy,
+                stateStatus: MultisigStateStatus.STATE_NOT_INITIALIZED
+            };
+            else if (new RegExp(MultisigDeleteRequestRejectionError.NO_SUCH_REQUEST).test(e && e.kind && e.kind.ExecutionError)) return {
+                codeStatus: validCodeStatusIfNoDeploy,
+                stateStatus: MultisigStateStatus.VALID_STATE
+            };
+            else if (new RegExp(MultisigDeleteRequestRejectionError.METHOD_NOT_FOUND).test(e && e.message)) // not reachable if transaction included a deploy
+            return {
+                codeStatus: MultisigCodeStatus.INVALID_CODE,
+                stateStatus: MultisigStateStatus.UNKNOWN_STATE
+            };
+            throw e;
+        }
+    }
+    deleteRequest(request_id) {
+        return super.signAndSendTransaction({
+            receiverId: this.accountId,
+            actions: [
+                transaction_1.functionCall("delete_request", {
+                    request_id
+                }, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT)
+            ]
+        });
+    }
+    async deleteAllRequests() {
+        const request_ids = await this.getRequestIds();
+        if (request_ids.length) await Promise.all(request_ids.map((id)=>this.deleteRequest(id)));
     }
     async deleteUnconfirmedRequests() {
         // TODO: Delete in batch, don't delete unexpired
@@ -42802,11 +43086,51 @@ class Account2FA extends AccountMultisig {
             transaction_1.addKey(confirmOnlyKey, transaction_1.functionCallAccessKey(accountId, exports.MULTISIG_CONFIRM_METHODS, null)),
             transaction_1.deployContract(contractBytes), 
         ];
-        if ((await this.state()).code_hash === "11111111111111111111111111111111") actions.push(transaction_1.functionCall("new", newArgs, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT));
+        const newFunctionCallActionBatch = actions.concat(transaction_1.functionCall("new", newArgs, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT));
         console.log("deploying multisig contract for", accountId);
-        return await super.signAndSendTransactionWithAccount(accountId, actions);
+        const { stateStatus: multisigStateStatus  } = await this.checkMultisigCodeAndStateStatus(contractBytes);
+        switch(multisigStateStatus){
+            case MultisigStateStatus.STATE_NOT_INITIALIZED:
+                return await super.signAndSendTransactionWithAccount(accountId, newFunctionCallActionBatch);
+            case MultisigStateStatus.VALID_STATE:
+                return await super.signAndSendTransactionWithAccount(accountId, actions);
+            case MultisigStateStatus.INVALID_STATE:
+                throw new providers_1.TypedError(`Can not deploy a contract to account ${this.accountId} on network ${this.connection.networkId}, the account has existing state.`, "ContractHasExistingState");
+            default:
+                throw new providers_1.TypedError(`Can not deploy a contract to account ${this.accountId} on network ${this.connection.networkId}, the account state could not be verified.`, "ContractStateUnknown");
+        }
     }
-    async disable(contractBytes) {
+    async disableWithFAK({ contractBytes , cleanupContractBytes  }) {
+        let cleanupActions = [];
+        if (cleanupContractBytes) {
+            await this.deleteAllRequests().catch((e)=>e);
+            cleanupActions = await this.get2faDisableCleanupActions(cleanupContractBytes);
+        }
+        const keyConversionActions = await this.get2faDisableKeyConversionActions();
+        const actions = [
+            ...cleanupActions,
+            ...keyConversionActions,
+            transaction_1.deployContract(contractBytes)
+        ];
+        const accessKeyInfo = await this.findAccessKey(this.accountId, actions);
+        if (accessKeyInfo && accessKeyInfo.accessKey && accessKeyInfo.accessKey.permission !== "FullAccess") throw new providers_1.TypedError(`No full access key found in keystore. Unable to bypass multisig`, "NoFAKFound");
+        return this.signAndSendTransactionWithAccount(this.accountId, actions);
+    }
+    async get2faDisableCleanupActions(cleanupContractBytes) {
+        const currentAccountState = await this.viewState("").catch((error)=>{
+            const cause = error.cause && error.cause.name;
+            if (cause == "NO_CONTRACT_CODE") return [];
+            throw cause == "TOO_LARGE_CONTRACT_STATE" ? new providers_1.TypedError(`Can not deploy a contract to account ${this.accountId} on network ${this.connection.networkId}, the account has existing state.`, "ContractHasExistingState") : error;
+        });
+        const currentAccountStateKeys = currentAccountState.map(({ key  })=>key.toString("base64"));
+        return currentAccountState.length ? [
+            transaction_1.deployContract(cleanupContractBytes),
+            transaction_1.functionCall("clean", {
+                keys: currentAccountStateKeys
+            }, exports.MULTISIG_GAS, new bn_js_1.default("0"))
+        ] : [];
+    }
+    async get2faDisableKeyConversionActions() {
         const { accountId  } = this;
         const accessKeys = await this.getAccessKeys();
         const lak2fak = accessKeys.filter(({ access_key  })=>access_key.permission !== "FullAccess").filter(({ access_key  })=>{
@@ -42816,15 +43140,33 @@ class Account2FA extends AccountMultisig {
         const confirmOnlyKey = key_pair_1.PublicKey.from((await this.postSignedJson("/2fa/getAccessKey", {
             accountId
         })).publicKey);
-        const actions = [
+        return [
             transaction_1.deleteKey(confirmOnlyKey),
             ...lak2fak.map(({ public_key  })=>transaction_1.deleteKey(key_pair_1.PublicKey.from(public_key))),
-            ...lak2fak.map(({ public_key  })=>transaction_1.addKey(key_pair_1.PublicKey.from(public_key), null)),
+            ...lak2fak.map(({ public_key  })=>transaction_1.addKey(key_pair_1.PublicKey.from(public_key), transaction_1.fullAccessKey()))
+        ];
+    }
+    /**
+     * This method converts LAKs back to FAKs, clears state and deploys an 'empty' contract (contractBytes param)
+     * @param [contractBytes]{@link https://github.com/near/near-wallet/blob/master/packages/frontend/src/wasm/main.wasm?raw=true}
+     * @param [cleanupContractBytes]{@link https://github.com/near/core-contracts/blob/master/state-cleanup/res/state_cleanup.wasm?raw=true}
+     */ async disable(contractBytes, cleanupContractBytes) {
+        const { stateStatus  } = await this.checkMultisigCodeAndStateStatus();
+        if (stateStatus !== MultisigStateStatus.VALID_STATE && stateStatus !== MultisigStateStatus.STATE_NOT_INITIALIZED) throw new providers_1.TypedError(`Can not deploy a contract to account ${this.accountId} on network ${this.connection.networkId}, the account state could not be verified.`, "ContractStateUnknown");
+        let deleteAllRequestsError;
+        await this.deleteAllRequests().catch((e)=>deleteAllRequestsError = e);
+        const cleanupActions = await this.get2faDisableCleanupActions(cleanupContractBytes).catch((e)=>{
+            if (e.type === "ContractHasExistingState") throw deleteAllRequestsError || e;
+            throw e;
+        });
+        const actions = [
+            ...cleanupActions,
+            ...await this.get2faDisableKeyConversionActions(),
             transaction_1.deployContract(contractBytes), 
         ];
-        console.log("disabling 2fa for", accountId);
+        console.log("disabling 2fa for", this.accountId);
         return await this.signAndSendTransaction({
-            receiverId: accountId,
+            receiverId: this.accountId,
             actions
         });
     }
@@ -42941,7 +43283,7 @@ const convertActions = (actions, accountId, receiverId)=>actions.map((a)=>{
         return action;
     });
 
-},{"buffer":"fCgem","bn.js":"9pdNn","depd":"2jGeI","./account":"hxSQV","./utils/format":"16c5X","./utils/key_pair":"kBQFP","./transaction":"jJQ5a","./utils/web":"iSqiB"}],"aQbxV":[function(require,module,exports) {
+},{"buffer":"fCgem","bn.js":"9pdNn","depd":"2jGeI","./account":"hxSQV","./utils/format":"16c5X","./utils/key_pair":"kBQFP","./transaction":"jJQ5a","./providers":"gtL2a","./utils/web":"iSqiB"}],"aQbxV":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -43029,17 +43371,18 @@ const signer_1 = require("./signer");
 /**
  * Connects an account to a given network via a given provider
  */ class Connection {
-    constructor(networkId, provider, signer){
+    constructor(networkId, provider, signer, jsvmAccountId){
         this.networkId = networkId;
         this.provider = provider;
         this.signer = signer;
+        this.jsvmAccountId = jsvmAccountId;
     }
     /**
      * @param config Contains connection info details
      */ static fromConfig(config) {
         const provider = getProvider(config.provider);
         const signer = getSigner(config.signer);
-        return new Connection(config.networkId, provider, signer);
+        return new Connection(config.networkId, provider, signer, config.jsvmAccountId);
     }
 }
 exports.Connection = Connection;
@@ -43296,8 +43639,9 @@ const account_creator_1 = require("./account_creator");
             },
             signer: config.signer || {
                 type: "InMemorySigner",
-                keyStore: config.keyStore || config.deps.keyStore
-            }
+                keyStore: config.keyStore || config.deps && config.deps.keyStore
+            },
+            jsvmAccountId: config.jsvmAccountId || `jsvm.${config.networkId}`
         });
         if (config.masterAccount) {
             // TODO: figure out better way of specifiying initial balance.
@@ -44240,7 +44584,7 @@ module.exports = function() {
 };
 
 },{"u3":"dIyaj","./prepareStackTrace":"85RZD"}],"9VuTo":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1654270232041-50393223890720";
+const CONTRACT_NAME = "dev-1654820193122-55482886352242";
 function getConfig(env) {
     switch(env){
         case "production":
@@ -44301,156 +44645,6 @@ function getConfig(env) {
 }
 module.exports = getConfig;
 
-},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("react-refresh/runtime");
-function debounce(func, delay) {
-    var args1;
-    var timeout = undefined;
-    return function(args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module) {
-    if (isReactRefreshBoundary(module.exports)) {
-        registerExportsForReactRefresh(module);
-        if (module.hot) {
-            module.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module.exports;
-            });
-            module.hot.accept(function(getParents) {
-                var prevExports = module.hot.data.prevExports;
-                var nextExports = module.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module) {
-    var exports = module.exports, id = module.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + " %exports% " + key);
-    }
-}
-
-},{"react-refresh/runtime":"786KC"}]},["1xC6H","dk7Fv","7t4RR"], "7t4RR", "parcelRequire05ca")
+},{}]},["1xC6H","dk7Fv","7t4RR"], "7t4RR", "parcelRequire05ca")
 
 //# sourceMappingURL=index.b53d4b81.js.map
